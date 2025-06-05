@@ -1,255 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>charity: water</title>
-  <style>
-    @font-face {
-      font-family: 'Proxima Nova';
-      src: url('https://fonts.cdnfonts.com/s/17529/ProximaNova-Regular.woff') format('woff');
-      font-weight: 400;
-    }
-    @font-face {
-      font-family: 'Proxima Nova';
-      src: url('https://fonts.cdnfonts.com/s/17529/ProximaNova-Bold.woff') format('woff');
-      font-weight: 700;
-    }
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index b8035a29457fa8bd4afc214f84f22ddfdac1d48e..02ea875bb62280168b36129121a521c06742d1a7 100644
+--- a/index.html
++++ b/index.html
+@@ -174,82 +174,82 @@
+     footer {
+       background-color: #000;
+       color: #fff;
+       text-align: center;
+       padding: 2rem 1rem;
+       font-size: 0.9rem;
+     }
+ 
+     @media (max-width: 768px) {
+       .hero h2 {
+         font-size: 2rem;
+       }
+       .logo h1 {
+         font-size: 2rem;
+       }
+       .links a {
+         width: 100%;
+         text-align: center;
+       }
+     }
+   </style>
+ </head>
+ <body>
+   <header>
+     <div class="logo">
+-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Charity_water_logo_can_only.svg/1024px-Charity_water_logo_can_only.svg.png" alt="Jerry Can Logo" />
++      <img src="logo.png" alt="Jerry Can Logo" />
+       <h1>charity: water</h1>
+     </div>
+   </header>
+ 
+   <section class="hero">
+     <h2>Support. Donate. Inspire.</h2>
+     <p>Join us in our mission to bring clean, safe drinking water to every person on the planet.</p>
+   </section>
+ 
+   <div class="banner">
+     Every $40 helps one person gain access to clean water. Your impact starts now.
+   </div>
+ 
+   <div class="ticker" id="donationTicker">
+     $0 raised so far. Be the first to donate!
+   </div>
+ 
+   <section class="links">
+     <a href="#about">About Us</a>
+     <a href="#contact">Give</a>
+     <a href="#services">Our Services</a>
+   </section>
+ 
+   <section class="module" id="services">
+     <h3>What We Do</h3>
+     <p>We bring clean and safe drinking water to people in developing countries. Our 100% model ensures every public donation funds water projects, not overhead.</p>
+   </section>
+ 
+   <section class="module" id="about">
+     <h3>Who We Are</h3>
+     <p>charity: water is a nonprofit organization committed to ending the water crisis within our lifetime through transparency, innovation, and local partnerships.</p>
+   </section>
+ 
+   <section class="module" id="contact">
+     <h3>Join the Movement</h3>
+     <p>Whether you donate, fundraise, or simply share our story, you're part of a global community committed to making clean water accessible for everyone.</p>
+   </section>
+ 
+   <section class="image-section">
+-    <img src="https://via.placeholder.com/800x400" alt="Clean water initiative image" />
++    <img src="photo.jpg" alt="Clean water initiative image" />
+   </section>
+ 
+   <footer>
+     <p>&copy; 2025 charity: water. All rights reserved.</p>
+   </footer>
+ 
+   <script>
+     let total = 0;
+     const ticker = document.getElementById("donationTicker");
+     setInterval(() => {
+       total += Math.floor(Math.random() * 40);
+       ticker.textContent = `$${total.toLocaleString()} raised so far. Thank you for your support!`;
+     }, 5000);
+   </script>
+ </body>
+ </html>
+diff --git a/logo.png.png b/logo.png
+similarity index 100%
+rename from logo.png.png
+rename to logo.png
+diff --git a/photo.jpg b/photo.jpg
+new file mode 100644
+index 0000000000000000000000000000000000000000..66ca59835b6a393b7982e72992fffc02d16302e8
+GIT binary patch
+literal 609
+zcmbV{zi-n}5XZmIe$Efk&}WCHr6jE_MS#>IJ)?*TDMm<9fW@%DhFw)+0m)%tjx#VY
+zIYFYUBmRNXzo0`U80`unek@HHSZN2Q26K)If|bvm?(W^)`%0I6%nl%KcW!mS7(<r~
+z*%#adSJm9P$~8?Z6z57sV!m8HQ?67hXLVz#YSb30)ujjLFEp0P8;!=wCG+xn^Wxgt
+z6`RN&vpHU`*RMC5>#c6LyZ1l5ohES5{wWHr`_Er_;O`S92GB>Kn~+oqGUzefSq&cR
+z+rMkgH2SAICSb`w`=w_Qspfy7#gqx&r$FynUMSSQbruV?EouOTt!qCXIe9fd-R2S|
+z(aeLCj+D}so-181*!6<I3%*B093{lW@@?JMdv<RehQ0CdO_)y7^yui=Fcd|x_KkZR
+zJEPI)B|q27Y3Jf1SIuQz$8{1f@}eYVIG9+Zb;BPI$HOpvY8@K-@nA48?46CnuhqX<
+zJpmJaffA%)!V<z3t0xW%AjIsJ{E8W_FxxbUs4f2;2~#=`r!jV=fCZbj7he~jWP4Z<
+pP#9O)sRAXYsNlM7Sbms&Mu{;nP1%33dFQU5s2|>4U9M-JegSo=rPKfb
 
-    html {
-      scroll-behavior: smooth;
-    }
+literal 0
+HcmV?d00001
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Proxima Nova', sans-serif;
-    }
-
-    body {
-      background-color: #fff;
-      color: #000;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #FFC907;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-        .logo img {
-      height: 48px;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .logo img:hover {
-      transform: rotate(-5deg) scale(1.05);
-    }
-
-    .logo h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #000;
-    }
-
-    .hero {
-      background-color: #000;
-      color: #fff;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      animation: fadeInDown 1s ease-in-out;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 640px;
-      margin: 0 auto;
-      color: #ddd;
-      animation: fadeInUp 1.3s ease-in-out;
-    }
-
-    @keyframes fadeInDown {
-      from {opacity: 0; transform: translateY(-20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    .banner {
-      background-color: #FFC907;
-      color: #000;
-      padding: 1.5rem 1rem;
-      text-align: center;
-      font-weight: 700;
-      font-size: 1.25rem;
-    }
-
-    .ticker {
-      background-color: #000;
-      color: #fff;
-      padding: 0.75rem 1rem;
-      text-align: center;
-      font-size: 1rem;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      padding: 2rem 1rem;
-    }
-
-    .links a {
-      background-color: #000;
-      color: #FFC907;
-      text-decoration: none;
-      padding: 14px 28px;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .links a:hover {
-      background-color: #222;
-      color: #FFD84D;
-      transform: translateY(-3px) scale(1.05);
-    }
-
-    .module {
-      padding: 3rem 1rem;
-      text-align: center;
-      border-top: 1px solid #eee;
-    }
-
-    .module h3 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .module p {
-      max-width: 720px;
-      margin: 0 auto 24px;
-      font-size: 1.05rem;
-      color: #333;
-    }
-
-    .image-section {
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    .image-section img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.4s ease-in-out;
-    }
-
-    .image-section img:hover {
-      transform: scale(1.03);
-    }
-
-    footer {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h2 {
-        font-size: 2rem;
-      }
-      .logo h1 {
-        font-size: 2rem;
-      }
-      .links a {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Charity_water_logo_can_only.svg/1024px-Charity_water_logo_can_only.svg.png" alt="Jerry Can Logo" />
-      <h1>charity: water</h1>
-    </div>
-  </header>
-
-  <section class="hero">
-    <h2>Support. Donate. Inspire.</h2>
-    <p>Join us in our mission to bring clean, safe drinking water to every person on the planet.</p>
-  </section>
-
-  <div class="banner">
-    Every $40 helps one person gain access to clean water. Your impact starts now.
-  </div>
-
-  <div class="ticker" id="donationTicker">
-    $0 raised so far. Be the first to donate!
-  </div>
-
-  <section class="links">
-    <a href="#about">About Us</a>
-    <a href="#contact">Give</a>
-    <a href="#services">Our Services</a>
-  </section>
-
-  <section class="module" id="services">
-    <h3>What We Do</h3>
-    <p>We bring clean and safe drinking water to people in developing countries. Our 100% model ensures every public donation funds water projects, not overhead.</p>
-  </section>
-
-  <section class="module" id="about">
-    <h3>Who We Are</h3>
-    <p>charity: water is a nonprofit organization committed to ending the water crisis within our lifetime through transparency, innovation, and local partnerships.</p>
-  </section>
-
-  <section class="module" id="contact">
-    <h3>Join the Movement</h3>
-    <p>Whether you donate, fundraise, or simply share our story, you're part of a global community committed to making clean water accessible for everyone.</p>
-  </section>
-
-  <section class="image-section">
-    <img src="https://via.placeholder.com/800x400" alt="Clean water initiative image" />
-  </section>
-
-  <footer>
-    <p>&copy; 2025 charity: water. All rights reserved.</p>
-  </footer>
-
-  <script>
-    let total = 0;
-    const ticker = document.getElementById("donationTicker");
-    setInterval(() => {
-      total += Math.floor(Math.random() * 40);
-      ticker.textContent = `$${total.toLocaleString()} raised so far. Thank you for your support!`;
-    }, 5000);
-  </script>
-</body>
-</html>
+ 
+EOF
+)
